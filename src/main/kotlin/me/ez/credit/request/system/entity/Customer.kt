@@ -4,7 +4,7 @@ import me.ez.credit.request.system.entity.Address
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "Cliente")
+//@Table(name = "Cliente")
 data class Customer(
     @Column(nullable = false) var firstName: String = "",
     @Column(nullable = false) var lastName: String = "",
