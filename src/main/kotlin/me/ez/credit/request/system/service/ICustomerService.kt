@@ -1,7 +1,6 @@
-package me.ez.credit.request.system
+package me.ez.credit.request.system.service
 
 import me.ez.credit.request.system.Customer
-import java.util.UUID
 
 interface ICustomerService {
 
@@ -9,5 +8,5 @@ interface ICustomerService {
 
     fun findById (id: Long): Customer
 
-    fun delete (id: Long): Customer
+    fun delete (id: Long)
 }

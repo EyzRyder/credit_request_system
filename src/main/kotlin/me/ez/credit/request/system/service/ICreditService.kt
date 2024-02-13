@@ -1,4 +1,4 @@
-package me.ez.credit.request.system
+package me.ez.credit.request.system.service
 
 import me.ez.credit.request.system.Credit
 import java.util.UUID
