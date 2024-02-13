@@ -1,6 +1,10 @@
 package me.ez.credit.request.system.entity
 
-data class Address{
-    var zipCode: String = "",
-    var street: String = ""
-}
+import jakarta.persistence.Embeddable
+import jakarta.persistence.Column
+
+@Embeddable
+data class Address(
+    @Column(nullable = false) var zipCode: String = "",
+    @Column(nullable = false) var street: String = ""
+)
