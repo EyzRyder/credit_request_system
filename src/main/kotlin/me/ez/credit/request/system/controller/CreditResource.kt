@@ -6,6 +6,7 @@ import me.ez.credit.request.system.dto.CreditDto
 import me.ez.credit.request.system.dto.CreditViewList
 import me.ez.credit.request.system.dto.CreditView
 import org.springframework.web.bind.annotation.*
+import jakarta.validation.Valid
 
 @RestController
 @RequestMapping("/api/credit")
@@ -14,7 +15,7 @@ class CreditResource(
 ){
 
     @PostMapping
-    fun saveCredit(@RequestBody creditDto: CreditDto): ResponseEntity<String> {
+    fun saveCredit(@RequestBody @Valid creditDto: CreditDto): ResponseEntity<String> {
         val credit: Credit = this.creditService.save(creditDto.toEntity())
         return ResponseEntity.status(HttpsStatus.CREATED)
         .body("Credit ${credit.creditCode} - Customer ${credit.customer?.firstName} Saved!")
