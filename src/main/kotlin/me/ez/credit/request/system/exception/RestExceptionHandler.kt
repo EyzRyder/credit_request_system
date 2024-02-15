@@ -1,5 +1,6 @@
 package me.ez.credit.request.system.exception
 
+import me.ez.credit.request.system.exception.BusinessException
 import org.springframework.web.bind.annotation.RestControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.MethodArgumentNotValidException
@@ -40,4 +41,31 @@ class RestException{
             ), HttpStatus.CONFLICT
         )
     }
+
+    @ExceptionHandler(BusinessException::class)
+    fun handlerValidxception(ex: BusinessException: Response<ExceptionDetails>{
+        return ResponseEntity(
+            ExceptionDetails(
+            title = "BAD REQUEST! Consult the Documentation",
+            timestamp = LocalDateTime.now(),
+            status = HttpStatus.BAD_REQUEST.value(),
+            exception = ex.javaClass.toString(),
+            details = mutableMapOf(ex.cause.toString() to ex.message)
+            ), HttpStatus.BAD_REQUEST
+        )
+    }
+  @ExceptionHandler(IllegalArgumentException::class)
+    fun handlerValidxception(ex: IllegalArgumentException): Response<ExceptionDetails>{
+        return ResponseEntity(
+            ExceptionDetails(
+            title = "BAD REQUEST! Consult the Documentation",
+            timestamp = LocalDateTime.now(),
+            status = HttpStatus.BAD_REQUEST.value(),
+            exception = ex.javaClass.toString(),
+            details = mutableMapOf(ex.cause.toString() to ex.message)
+            ), HttpStatus.BAD_REQUEST
+        )
+    }
+
 }
+
