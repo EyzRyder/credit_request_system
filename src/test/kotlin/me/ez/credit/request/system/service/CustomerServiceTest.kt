@@ -7,11 +7,11 @@ import io.mockk.junit5.MockKExtension
 import io.mockk.just
 import io.mockk.runs
 import io.mockk.verify
-import me.dio.credit.request.system.entity.Address
-import me.dio.credit.request.system.entity.Customer
-import me.dio.credit.request.system.exception.BusinessException
-import me.dio.credit.request.system.repository.CustomerRepository
-import me.dio.credit.request.system.service.impl.CustomerService
+import me.ez.credit.request.system.entity.Address
+import me.ez.credit.request.system.entity.Customer
+import me.ez.credit.request.system.exception.BusinessException
+import me.ez.credit.request.system.repository.CustomerRepository
+import me.ez.credit.request.system.service.impl.CustomerService
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
