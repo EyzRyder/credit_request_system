@@ -1,4 +1,5 @@
 # Credit App
+API Rest para um Sistema de Analise de Solicitação de Crédito
 
 ## Path
 
