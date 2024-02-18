@@ -1,5 +1,5 @@
-package me.ez.credit.request.system
+package me.ez.credit.request.system.enummeration
 
 enum class Status {
-    IN_PROGRESS, APROVED,REFECT
+    IN_PROGRESS, APROVED, REFECT
 }

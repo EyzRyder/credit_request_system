@@ -1,15 +1,21 @@
-package me.ez.credit.request.system.dto
+package me.ez.credit.request.system.dto.request
 
 import me.ez.credit.request.system.entity.Customer
 import me.ez.credit.request.system.entity.Address
 import java.math.BigDecimal
+import jakarta.validation.constraints.Email
+import jakarta.validation.constraints.NotEmpty
+import jakarta.validation.constraints.NotNull
+import org.hibernate.validator.constraints.br.CPF
 
 data class CustomerDto(
  @field:NotEmpty(message = "Invalid input") val firstName: String,
  @field:NotEmpty(message = "Invalid input") val lastName: String,
- @field:CPF(message = "Invalid input") val cpf: String,
+ @field:NotEmpty(message = "Invalid input")
+ @field:CPF(message = "Invalid CPF") val cpf: String,
  @field:NotNull(message = "InvalidInput") val income: BigDecimal,
- @field:Email(message = "Invalid input") val email: String,
+ @field:Email(message = "Invalid email")
+ @field:NotEmpty(message = "Invalid input") val email: String,
  @field:NotEmpty(message = "Invalid input") val password: String,
  @field:NotEmpty(message = "Invalid input") val zipCode: String,
  @field:NotEmpty(message = "Invalid input") val street: String,

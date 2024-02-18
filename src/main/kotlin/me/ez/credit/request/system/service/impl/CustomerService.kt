@@ -3,6 +3,7 @@ package me.ez.credit.request.system.service.impl
 import me.ez.credit.request.system.entity.Customer
 import me.ez.credit.request.system.repository.CustomerRepository
 import me.ez.credit.request.system.service.ICustomerService
+import me.ez.credit.request.system.exception.BusinessException
 import org.springframework.stereotype.Service
 
 @Service

@@ -1,7 +1,9 @@
-package me.ez.credit.request.system.dto
+package me.ez.credit.request.system.dto.request
 
 import java.math.BigDecimal
 import me.ez.credit.request.system.entity.Customer
+import jakarta.validation.constraints.NotEmpty
+import jakarta.validation.constraints.NotNull
 
 data class CustomerUpdateDto (
         @field:NotEmpty(message = "Invalid input") val firstName: String,

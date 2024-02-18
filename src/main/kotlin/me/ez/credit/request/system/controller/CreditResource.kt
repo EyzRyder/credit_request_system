@@ -2,11 +2,15 @@ package me.ez.credit.request.system.controller
 
 import me.ez.credit.request.system.entity.Credit
 import me.ez.credit.request.system.service.CreditService
-import me.ez.credit.request.system.dto.CreditDto
-import me.ez.credit.request.system.dto.CreditViewList
-import me.ez.credit.request.system.dto.CreditView
-import org.springframework.web.bind.annotation.*
+import me.ez.credit.request.system.dto.request.CreditDto
+import me.ez.credit.request.system.dto.response.CreditViewList
+import me.ez.credit.request.system.dto.response.CreditView
 import jakarta.validation.Valid
+import org.springframework.web.bind.annotation.*
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
+import java.util.*
+import java.util.stream.Collectors
 
 @RestController
 @RequestMapping("/api/credit")

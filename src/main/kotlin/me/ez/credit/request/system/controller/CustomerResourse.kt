@@ -3,10 +3,12 @@ package me.ez.credit.request.system.controller
 import org.springframework.web.bind.annotation.*
 import jakarta.validation.Valid
 import me.ez.credit.request.system.entity.Customer
-import me.ez.credit.request.system.dto.CustomerDto
 import me.ez.credit.request.system.service.impl.CustomerService
-import me.ez.credit.request.system.controller.CustomerView
-import me.ez.credit.request.system.controller.CustomerUpdateDto
+import me.ez.credit.request.system.dto.response.CustomerView
+import me.ez.credit.request.system.dto.request.CustomerDto
+import me.ez.credit.request.system.dto.request.CustomerUpdateDto
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 
 @RestController
 @RequestMapping("/api/customers")

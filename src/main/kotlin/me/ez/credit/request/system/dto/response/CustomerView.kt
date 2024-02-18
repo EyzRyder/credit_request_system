@@ -1,4 +1,4 @@
-package me.ez.credit.request.system.dto
+package me.ez.credit.request.system.dto.response
 
 import me.ez.credit.request.system.entity.Customer
 import java.math.BigDecimal
